@@ -375,9 +375,9 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 5vw 0;
     box-sizing: border-box;
-    margin-top: 50px;
+    margin-top: 5vw;
 }
 
 .banner img {
@@ -420,6 +420,13 @@ button:hover {
 /* New banner content styles */
 .banner-content {
     text-align: left;
+}
+
+.banner-content img {
+    max-width: 750px;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the image */
 }
 
 
@@ -515,4 +522,37 @@ button:hover {
 
 .user-need-box li {
     margin-bottom: 10px; /* Add margin to list items */
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Center the image */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.back-to-top img {
+    width: 20px;
+    height: 20px;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
