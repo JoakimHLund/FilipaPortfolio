@@ -6,6 +6,17 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: #fff;
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 0 0 20px; /* Add left padding to offset the bullets */
+}
+
+ul li {
+    margin-bottom: 15px; /* Increase the gap between list items */
 }
 
 body p{
@@ -23,6 +34,7 @@ h3{
     max-width: 1200px;
     border-radius: 8px;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .top-section {
@@ -39,22 +51,21 @@ h3{
 }
 
 .left-part img {
-    max-width: 100%;
     height: auto;
     border-radius: 50%;
-    width: 150px; /* Smaller size for profile image */
+    max-width: 200px; /* Smaller size for profile image */
 }
 
 .right-part {
     flex: 2;
     padding: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; 
 }
 
 .right-part h1 {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .right-part p {
@@ -62,9 +73,14 @@ h3{
     margin-right: 20px;
 }
 
+.links{
+    margin-top: 20px;
+}
+
 .links a {
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 10px;
     padding: 0.5em 0.7em;
     text-decoration: none;
     color: black;
@@ -375,15 +391,15 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5vw 0;
     box-sizing: border-box;
-    margin-top: 5vw;
 }
 
 .banner img {
     max-width: 550px;
     width: 100%;
     height: auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 
 /* Add more space between sections */
@@ -555,4 +571,35 @@ button:hover {
 .back-to-top:hover {
     background-color: #333;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.banner-images {
+    max-width: 800px;
+    padding: 1vw;
+}
+
+.banner-images img {
+    max-width: 24%;
+    height: auto;
+    flex: 1;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust gap as needed */
+}
+
+.image-grid img {
+    flex: 1 1 calc(33.333% - 10px); /* Three images per row with gap adjustment */
+    max-width: calc(33.333% - 10px);
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .image-grid img {
+        flex: 1 1 calc(50% - 10px); /* Two images per row with gap adjustment for mobile */
+        max-width: calc(50% - 10px);
+    }
 }
