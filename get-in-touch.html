@@ -21,7 +21,7 @@
                         <p>I'd love to hear from you! Just fill out this form or connect with me on <a href="https://www.linkedin.com/in/ana-filipa-costa-880b2528a/">LinkedIn</a>.</p>
                     </div>
                     <div class="form-container">
-                        <form action="#" method="post">
+                        <form id="contactForm">
                             <div class="form-group">
                                 <label for="name">Name*</label>
                                 <input type="text" id="name" name="name" required>
@@ -43,5 +43,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Construct mailto URL
+            const mailtoLink = `mailto:Ana@Costaux.com?subject=Contact%20Form%20Submission&body=${encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\nMessage:\\n' + message)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+        });
+    </script>
 </body>
 </html>
