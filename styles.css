@@ -17,6 +17,7 @@ ul {
 
 ul li {
     margin-bottom: 15px; /* Increase the gap between list items */
+    line-height: 1.7em;
 }
 
 body p{
@@ -33,8 +34,7 @@ h3{
     width: 80%;
     max-width: 1200px;
     border-radius: 8px;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    margin-bottom: 3vw;
 }
 
 .top-section {
@@ -53,7 +53,7 @@ h3{
 .left-part img {
     height: auto;
     border-radius: 50%;
-    max-width: 200px; /* Smaller size for profile image */
+    max-width: 230px; /* Smaller size for profile image */
 }
 
 .right-part {
@@ -73,8 +73,10 @@ h3{
     margin-right: 20px;
 }
 
+
+
 .links{
-    margin-top: 20px;
+    margin-top: 0.8vw;
 }
 
 .links a {
@@ -96,13 +98,13 @@ h3{
 
 .bottom-section {
     padding: 20px;
+    margin-top: 2vw;
 }
 
 .bottom-section h2 {
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.5em;
-    padding:20px;
 }
 
 .projects-grid {
@@ -150,7 +152,7 @@ h3{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .project-info h3 {
@@ -166,6 +168,7 @@ h3{
     color: white;
     font-size: 0.8em;
     cursor: pointer;
+    margin-top: 0;
 }
 
 .project-info button:hover {
@@ -180,12 +183,31 @@ h3{
 
     .project-card {
         flex: 1 1 calc(50% - 20px); /* Adjusts the width to be 50% minus the gap */
+        padding: 5px;
     }
 }
 
+@media (max-width: 768px) {
+
+    .right-part {
+        padding: 5px;
+    }
+    .right-part h1 {
+        text-align: center;
+    }
+    .right-part p {
+        margin-bottom: 15px;
+    }
+    .project-card {
+        padding: 5px;
+    }
+    .bottom-section {
+        padding: 5px;
+        padding-top: 10px;
+    }
+}
 .content {
-    margin-top: 50px; /* Adds more space above the text block */
-    margin-bottom: 50px;
+    margin-top: 3vw; /* Adds more space above the text block */
 }
 
 .full-width-background {
@@ -212,7 +234,6 @@ h3{
 
 .row {
     display: flex;
-    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -234,9 +255,10 @@ h3{
 .illustrations-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     margin-top: 50px;
+    max-width: 920px;
 }
 
 .illustration-card {
@@ -249,7 +271,6 @@ h3{
 .illustration-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -262,8 +283,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    margin-top: 50px;
+    margin-top: 3vw;
 }
 
 .image-container {
@@ -395,11 +415,14 @@ h3{
 }
 
 .banner img {
-    max-width: 550px;
     width: 100%;
     height: auto;
     margin-top: 5vw;
     margin-bottom: 5vw;
+}
+
+.topbanner{
+    max-width: 550px;
 }
 
 /* Add more space between sections */
@@ -436,13 +459,15 @@ button:hover {
 /* New banner content styles */
 .banner-content {
     text-align: left;
+    margin-top: 3vw;
+
 }
 
 .banner-content img {
     max-width: 750px;
     height: auto;
     display: block;
-    margin: 20px auto; /* Center the image */
+    margin: 30px auto; /* Center the image */
 }
 
 
@@ -450,12 +475,12 @@ button:hover {
 .personas {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .persona {
     flex: 1;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .persona:last-child {
@@ -490,12 +515,20 @@ button:hover {
 
     .persona {
         margin-right: 0;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .persona:last-child {
         margin-bottom: 0;
     }
+    .topbanner{
+        max-width: 70%;
+    }
+
+    .banner-content img {
+        margin: 10px auto; /* Center the image */
+    }
+
 }
 
 
@@ -504,7 +537,7 @@ button:hover {
     background-color: #F5F5F5;
     border-radius: 8px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 40px;
     box-shadow: 0 7.55px 7.55px rgba(0, 0, 0, 0.25);  /* Add drop shadow */
     padding: 0; /* Remove padding */
 }
@@ -544,7 +577,7 @@ button:hover {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 20px auto; /* Center the image */
+    margin: 30px auto; /* Center the image */
 }
 
 .back-to-top {
@@ -601,5 +634,8 @@ button:hover {
     .image-grid img {
         flex: 1 1 calc(50% - 10px); /* Two images per row with gap adjustment for mobile */
         max-width: calc(50% - 10px);
+    }
+    .banner-images{
+        max-width: 80%;
     }
 }
